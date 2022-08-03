@@ -1,0 +1,8 @@
+D:\Users\crisr\Documents\GitHub\Examen-Final\examenFinal\examenFinal\bin\Debug\examenFinal.exe.config
+D:\Users\crisr\Documents\GitHub\Examen-Final\examenFinal\examenFinal\bin\Debug\examenFinal.exe
+D:\Users\crisr\Documents\GitHub\Examen-Final\examenFinal\examenFinal\bin\Debug\examenFinal.pdb
+D:\Users\crisr\Documents\GitHub\Examen-Final\examenFinal\examenFinal\obj\Debug\examenFinal.csproj.AssemblyReference.cache
+D:\Users\crisr\Documents\GitHub\Examen-Final\examenFinal\examenFinal\obj\Debug\examenFinal.csproj.SuggestedBindingRedirects.cache
+D:\Users\crisr\Documents\GitHub\Examen-Final\examenFinal\examenFinal\obj\Debug\examenFinal.csproj.CoreCompileInputs.cache
+D:\Users\crisr\Documents\GitHub\Examen-Final\examenFinal\examenFinal\obj\Debug\examenFinal.exe
+D:\Users\crisr\Documents\GitHub\Examen-Final\examenFinal\examenFinal\obj\Debug\examenFinal.pdb
