@@ -13,15 +13,41 @@ namespace examenFinal
             inicio:
             try
             {
+                int pEvP = 0;
+                int sEvP = 0;
+                int EF = 0;
                 int acumulado = 0;
                 string decision;
 
-                Console.Write("Ingrese el acumulado del primer parcial: ");
-                acumulado = int.Parse(Console.ReadLine());
-                Console.Write("Ingrese el acumulado del segundo parcial: ");
-                acumulado = acumulado + int.Parse(Console.ReadLine());
+                pp:
+                Console.Write("Ingrese el acumulado de la primera evaluación parcial: ");
+                pEvP = int.Parse(Console.ReadLine());
+                if (pEvP > 35)
+                {
+                    Console.WriteLine("El acumulado de la primera evaluación parcial no puede ser mayor a 35");
+                    pEvP = 0;
+                    goto pp;
+                }
+                sp:
+                Console.Write("Ingrese el acumulado de la segunda evaluación parcial: ");
+                sEvP = int.Parse(Console.ReadLine());
+                if (sEvP > 35)
+                {
+                    Console.WriteLine("El acumulado de la segunda evaluación parcial no puede ser mayor a 35");
+                    sEvP = 0;
+                    goto sp;
+                }
+                f:
                 Console.Write("Ingrese el acumulado del examen final: ");
-                acumulado = acumulado + int.Parse(Console.ReadLine());
+                EF = int.Parse(Console.ReadLine());
+                if (EF > 30)
+                {
+                    Console.WriteLine("El acumulado del examen final no puede ser mayor a 30");
+                    EF = 0;
+                    goto f;
+                }
+
+                acumulado = pEvP + sEvP + EF;
 
                 switch (acumulado)
                 {
@@ -40,24 +66,30 @@ namespace examenFinal
                     case int n when (n >= 90 && n <= 100):
                         Console.WriteLine($"La calificacion es: {n} y la calificación alfabetica es A");
                         break;
-                }
-                Console.Write("Desea procesar otro la calificación de otro estudiante? ");
-                decision = Console.ReadLine();
-                switch (decision)
-                {
-                    case "s":
+                    case int n when (n > 100):
+                        Console.WriteLine("La suma de las calificaciones no puede se mayor a 100 verifique los valores ingresados" +
+                            " y trate de nuevo");
                         goto inicio;
                         break;
-                    case "n":
-                        Environment.Exit(0);
-                        break;
+                }
+                Console.Write("Desea procesar otro la calificación de otro estudiante? (s = Si n = No): ");
+                decision = Console.ReadLine();
+                if (decision == "S" || decision == "s")
+                {
+                    goto inicio;
+                    
+                }
+                else
+                {
+                    Environment.Exit(0);    
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                Console.WriteLine("Ha ocurrido un error inesperado: " + ex);
+                Console.WriteLine("Ha ocurrido un error inesperado, verifique si el valor ingresado" +
+                    " es un número entero valido");
                 goto inicio;
             }
         }
